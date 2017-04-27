@@ -1,0 +1,7 @@
+<div class="col-md-3 sidebar">
+    <h1>Bloc Chat</h1>
+    <button class="new-room-btn" type="button" ng-click="home.openModal()">New Room</button>
+    <ul>
+        <li ng-repeat="room in home.rooms">{{ room.$value }}</li>
+    </ul>
+</div>
