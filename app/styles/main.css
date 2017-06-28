@@ -1,55 +1,75 @@
-*, *::before, *::after {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+html{
+    height: 100%;
 }
 
-html {
-    height: 100%; /*makes sure HTML takes up 100% of the browser window */
-    font-size: 100%;
-}
-
-body {
-    font-family: 'Open Sans'; /* sets our font to the "Open Sans" typeface */
-    color: grey; 
-    min-height: 100%; /* says the height of the body must be, at minimum, 100% of the window */
-    padding-bottom: 200px;
-}
-
-ul {
-    list-style: none;
-}
-
-.container {
+body{
     margin: 0 auto;
-    max-width: 64rem;
 }
 
-.container.narrow {
-    max-width: 56rem;
+.sidebar-main {
+    height: 100vh;
+    width: 20%;
+    float:left;
+    padding: 0.5rem;
+    background-color: rgb(226,232,227);
+    /*position: absolute;
+    top: 0;
+    left: 0;*/
 }
 
-/* medium and small screens 640px */
-@media (min-width: 640px) {
-    html { font-size: 112%; }
-    
+.content{
+    height: 100vh;
+    /*width: 70%;*/
+    /*float: right;*/
+    background-color: #919195;
+}
+
+.sidebar-title {
+    padding: 0px;
+    position: relative;
+    font-family: 'sans-serif';
+    font-size: 25px;
+    color: black;
+    display: inline-block;
+}
+
+.sidebar .new-room{
+    font-size: 10px;
+}
+
+.rooms-list {
+    /*width: 100%;*/
+    display: block;
+    font-family: 'sans-serif';
+    font-size: 20px;
+    margin: 5px 0 5px 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media (min-width: 640px){
+    html{ font-size: 112%; }
+
     .column {
         float: left;
         padding-left: 1rem;
         padding-right: 1rem;
-    }
-    
+ }
+
     .column.full { width: 100%; }
     .column.two-thirds { width: 66.7%; }
     .column.half { width: 50%; }
     .column.third { width: 33.3%; }
     .column.fourth { width: 25%; }
+    .column.sixth { width: 16%; }
+    .column.five-sixth { width: 84%; }
     .column.flow-opposite { float: right; }
 }
 
-/* large screens 1024px */
-@media (min-width: 1024px) {
-    html {font-size: 120%;}
+@media (min-width: 1024px){
+  html{ font-size: 120%; }
 }
 
 .clearfix::before,
